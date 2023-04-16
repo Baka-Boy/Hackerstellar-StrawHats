@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Global styles */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header styles */
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    padding: 10px;
+  }
+  
+  /* Hero section styles */
+  
+  #hero {
+    background-color: #e3dfdf;
+    text-align: center;
+    padding: 50px;
+  }
+  
+  #hero h1 {
+    font-size: 36px;
+    margin: 0 0 20px;
+  }
+  
+  #hero p {
+    font-size: 18px;
+    margin: 0 0 40px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #3e3c3c;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: #3e3c3c;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #3e3c3c;
+    color: #fff;
+  }
+  
+  /* Features section styles */
+  
+  #features {
+    text-align: center;
+    color: antiquewhite;
+    padding: 50px;
+    background-color: red;
+    background-image:url("https://cdn.discordapp.com/attachments/1090709248163446864/1096875958184718346/back.jpg") ;
+    background-size: cover;
+  }
+  
+  #features h2 {
+    font-size: 36px;
+    margin: 0 0 40px;
+  }
+  
+  .feature {
+    margin: 0 20px;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    width: 30%;
+  }
+  
+  .feature img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .feature h3 {
+    font-size: 24px;
+    margin: 0 0 10px;
+  }
+  
+  .feature p {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  /* Footer styles */
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: Century Gothic;
+    box-sizing: border-box;
+}
+
+:root {
+  --img-size: 200px;
+  --gap: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 70px;
+}
+
+.card, .card2 {
+  position: relative;
+  height: var(--img-size);
+}
+
+.card .content, .card .photo,
+.card2 .content, .card2 .photo{
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.card div {
+  left: calc(var(--img-size) + var(--gap));
+  opacity: 0;
+}
+.card2 div {
+  right: calc(var(--img-size) + var(--gap));
+  opacity: 0;
+}
+
+.card .photo{
+  top: 50%;
+  left: 50%;
+  width: var(--img-size);
+  height: var(--img-size);
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  object-fit: cover;
+}
+.card2 .photo{
+  top: 50%;
+  left: 50%;
+  width: var(--img-size);
+  height: var(--img-size);
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  object-fit: cover;
+}
+.card:hover .content,
+.card2:hover .content {
+  opacity: 1;
+}
+
+.card:hover .photo {
+  left: 0;
+  transform: translate(0%, -50%);
+}
+.card2:hover .photo {
+  left: calc(100% - var(--img-size));
+  transform: translate(0%, -50%);
+} 
+
+    </style>
+</head>
+
+<body>
+    <div className="App">
+  
+        <main>
+          <section id="hero">
+            <h1>Welcome to Personal Finance Website</h1>
+            <p>Our mission is to help you manage your personal finances and achieve your financial goals.</p>
+            <a href="/" className="btn">Sign-up</a>
+            &emsp;
+            <a href="/" className="btn">Login</a>
+          </section>
+          <section id="features"  >
+          <div class="cards">
+            <div class="card">
+              <div class="content">
+                <h2>Budget tracking</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam numquam odit quidem qui aspernatur rem voluptatem velit nemo dolores saepe, dicta, dolor voluptates quo fuga eum est quam deleniti ipsam!</p>
+                <a href="expensetracker.py" className="btn">Get Started</a>
+              </div>
+              <img src="https://cdn.discordapp.com/attachments/1090709248163446864/1096875958478323832/budget.jpg" alt="" class="photo"/>
+            </div>
+            <div class="card2">
+              <div class="content">
+                <h2>Investing money</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam numquam odit quidem qui aspernatur rem voluptatem velit nemo dolores saepe, dicta, dolor voluptates quo fuga eum est quam deleniti ipsam!</p>
+                <a href="/" className="btn">Get Started</a>
+              </div>
+  
+              <img src="https://cdn.discordapp.com/attachments/1090709248163446864/1096875959770165369/invest.png" alt="" class="photo"/>
+            </div>
+            <div class="card">
+              <div class="content">
+                <h2>Debt Reduction</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam numquam odit quidem qui aspernatur rem voluptatem velit nemo dolores saepe, dicta, dolor voluptates quo fuga eum est quam deleniti ipsam!</p>
+                <a href="/" className="btn">Get Started</a>
+                
+              </div>
+              <img src="https://cdn.discordapp.com/attachments/1090709248163446864/1096875959237492796/debt.jpg" alt="" class="photo"/>
+            </div>
+            <div class="card2">
+              <div class="content">
+                <h2>Credit Improver</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam numquam odit quidem qui aspernatur rem voluptatem velit nemo dolores saepe, dicta, dolor voluptates quo fuga eum est quam deleniti ipsam!</p>
+                <a href="/" className="btn">Get Started</a>
+              </div>
+              <img src="https://cdn.discordapp.com/attachments/1090709248163446864/1096875958746751116/credit.jpeg" alt="" class="photo"/>
+            </div>
+          </div>
+          </section>
+        </main>
+        <footer>
+          <p>&copy; Team Straw Hats KJSCE HackerStellar</p>
+        </footer>
+      </div>
+</body>
+</html>
